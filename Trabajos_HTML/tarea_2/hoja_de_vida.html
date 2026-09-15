@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoja de Vida - Solorzano Cedeño Marcos Antonio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f9;
+            color: #2d3748;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Header con Foto y Datos Personales */
+        .header-card {
+            background-color: #1a365d;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .profile-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #63b3ed;
+            margin-right: 20px;
+        }
+
+        /* Secciones principales con DIVs */
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 18px 22px;
+            margin-bottom: 15px;
+            border-left: 4px solid #3182ce;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            font-size: 14pt;
+            color: #1a365d;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 6px;
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+
+        /* Tabla de Referencias Personales */
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .custom-table th {
+            background-color: #2b6cb0;
+            color: #ffffff;
+            text-align: left;
+            padding: 8px 10px;
+        }
+
+        .custom-table td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .custom-table tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- 1. DATOS PERSONALES -->
+    <div class="header-card">
+        <img src="foto.jpg" alt="Foto Perfil" class="profile-photo">
+        <div>
+            <h1>Solorzano Cedeño Marcos Antonio</h1>
+            <p>Estudiante de Ingeniería en TI / Desarrollador Web Jr.</p>
+            <p>📍 Manta, Manabí | 📞 +593 98 765 4321 | ✉️ e1315806594@live.uleam.edu.ec</p>
+        </div>
+    </div>
+
+    <!-- 2. ESTUDIOS REALIZADOS -->
+    <div class="card">
+        <h2 class="section-title">Estudios Realizados</h2>
+        <div>
+            <h3>Ingeniería en Tecnologías de la Información</h3>
+            <p><em>Universidad Laica Eloy Alfaro de Manabí (2023 - Presente)</em></p>
+        </div>
+    </div>
+
+    <!-- 3. EXPERIENCIA LABORAL -->
+    <div class="card">
+        <h2 class="section-title">Experiencia Laboral</h2>
+        <div>
+            <h3>Asistente de Soporte Técnico y Web</h3>
+            <p><em>TechSol Ecuador (Ene 2026 - Jun 2026)</em></p>
+        </div>
+    </div>
+
+    <!-- 4. CAPACITACIONES -->
+    <div class="card">
+        <h2 class="section-title">Capacitaciones</h2>
+        <p>• Taller Práctico: Diseño y Maquetación Web con HTML5 y CSS3 (40 hrs) - ULEAM</p>
+        <p>• Curso Profesional de Programación en Python (60 hrs)</p>
+    </div>
+
+    <!-- 5. REFERENCIAS PERSONALES -->
+    <div class="card">
+        <h2 class="section-title">Referencias Personales</h2>
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Cargo/Profesión</th>
+                    <th>Teléfono</th>
+                    <th>Correo Electrónico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ing. Roberto Álava</td>
+                    <td>Docente Universitario ULEAM</td>
+                    <td>+593 99 123 4567</td>
+                    <td>roberto.alava@uleam.edu.ec</td>
+                </tr>
+                <tr>
+                    <td>Lcda. María Fernanda Solórzano</td>
+                    <td>Gerente de Proyecto TechSol</td>
+                    <td>+593 98 234 5678</td>
+                    <td>mf.solorzano@techsol.ec</td>
+                </tr>
+                <tr>
+                    <td>Ing. Javier Delgado Vera</td>
+                    <td>Administrador de Redes</td>
+                    <td>+593 97 345 6789</td>
+                    <td>jdelgado@redesec.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
