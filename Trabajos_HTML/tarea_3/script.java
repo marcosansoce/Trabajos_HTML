@@ -1,6 +1,7 @@
 // Referencias a elementos
-const form = document.getElementById("formCliente");
+const form = document.getElementById("formUsuario");
 const mensajeExito = document.getElementById("mensajeExito");
+const mensajeError = document.getElementById("mensajeError")
 
 const cedula = document.getElementById("cedula");
 const nombre = document.getElementById("nombre");
@@ -22,7 +23,7 @@ function mostrarError(input, idError, mensaje) {
   }
 }
 
-// Validar Cédula (10 dígitos numéricos)
+// Validar Cédula
 function validarCedula() {
   const valor = cedula.value.trim();
   const soloNumeros = /^[0-9]{10}$/;
@@ -35,7 +36,7 @@ function validarCedula() {
   return mostrarError(cedula, "errorCedula", "");
 }
 
-// Validar Nombre (Obligatorio, máx. 30 caracteres)
+// Validar Nombre
 function validarNombre() {
   const valor = nombre.value.trim();
   if (valor === "") {
@@ -47,7 +48,7 @@ function validarNombre() {
   return mostrarError(nombre, "errorNombre", "");
 }
 
-// Validar Dirección (Obligatoria, máx. 50 caracteres)
+// Validar Dirección
 function validarDireccion() {
   const valor = direccion.value.trim();
   if (valor === "") {
@@ -59,7 +60,7 @@ function validarDireccion() {
   return mostrarError(direccion, "errorDireccion", "");
 }
 
-// Validar Teléfono (10 dígitos numéricos)
+// Validar Teléfono
 function validarTelefono() {
   const valor = telefono.value.trim();
   const soloNumeros = /^[0-9]{10}$/;
@@ -85,7 +86,7 @@ function validarCorreo() {
   return mostrarError(correo, "errorCorreo", "");
 }
 
-// Validación en tiempo real (evento input)
+// Validación en tiempo real 
 cedula.addEventListener("input", validarCedula);
 nombre.addEventListener("input", validarNombre);
 direccion.addEventListener("input", validarDireccion);
@@ -104,8 +105,14 @@ form.addEventListener("submit", function (evento) {
 
   if (cedulaValida && nombreValido && direccionValida && telefonoValido && correoValido) {
     mensajeExito.textContent = "Cliente guardado correctamente.";
-    form.reset();
+    mensajeError.textContent = "";
+    document.getElementById("tablaNombre").textContent = nombre.value.trim();
+    document.getElementById("tablaCedula").textContent = cedula.value.trim();
+    document.getElementById("tablaTeléfono").textContent = telefono.value.trim();
+    document.getElementById("tablaCorreo").textContent = correo.value.trim();
+    document.getElementById("tablaDireccion").textContent = direccion.value.trim();
   } else {
     mensajeExito.textContent = "";
+    mensajeError.textContent = "Datos ingresados no válidos.";
   }
 });

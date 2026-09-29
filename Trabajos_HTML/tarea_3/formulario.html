@@ -2,13 +2,13 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Ingreso de Datos de Clientes</title>
+  <title>Ingreso de Datos de Usuario</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="contenedor">
-    <h1>Ingreso de Datos de Clientes</h1>
-    <form id="formCliente" novalidate>
+    <h1>Ingreso de Datos de Usuario</h1>
+    <form id="formUsuario" novalidate>
       <div class="campo">
         <label for="cedula">Cédula:</label>
         <input type="text" id="cedula" maxlength="10" placeholder="10 dígitos">
@@ -34,10 +34,34 @@
         <input type="text" id="correo" placeholder="ejemplo@correo.com">
         <span class="error" id="errorCorreo"></span>
       </div>
-      <button type="submit">Guardar Cliente</button>
+      <button type="submit">Guardar Usuario</button>
       <p class="mensaje-exito" id="mensajeExito"></p>
+      <p class="mensaje-error" id="mensajeError"></p>
     </form>
+
   </div>
-  <script src="script.js"></script>
+  <div class="contenedor-tabla" id="contenedorTabla">
+    <table class="custom-table" id="custom-table">
+      <thead>
+          <tr>
+              <th>Nombre</th>
+              <th>Cedula</th>
+              <th>Teléfono</th>
+              <th>Correo Electrónico</th>
+              <th>Direccion</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td id="tablaNombre"></td>
+              <td id="tablaCedula"></td>
+              <td id="tablaTeléfono"></td>
+              <td id="tablaCorreo"></td>
+              <td id="tablaDireccion"></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="script.java"></script>
 </body>
 </html>
