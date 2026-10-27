@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Registro de Turno Médico</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registro de Turno Médico</h2>
+        <form id="turnoForm" novalidate>
+            <!-- Cédula -->
+            <div class="form-group">
+                <label for="cedula">Número de Cédula:</label>
+                <input type="text" id="cedula" name="cedula" placeholder="Ej: 1312345678" maxlength="10">
+                <span class="error-msg" id="error-cedula"></span>
+            </div>
+
+            <!-- Apellidos -->
+            <div class="form-group">
+                <label for="apellidos">Apellidos Completo:</label>
+                <input type="text" id="apellidos" name="apellidos" placeholder="Ej: Pérez Mendoza">
+                <span class="error-msg" id="error-apellidos"></span>
+            </div>
+
+            <!-- Nombres -->
+            <div class="form-group">
+                <label for="nombres">Nombres Completos:</label>
+                <input type="text" id="nombres" name="nombres" placeholder="Ej: Juan Carlos">
+                <span class="error-msg" id="error-nombres"></span>
+            </div>
+
+            <!-- Fecha Nacimiento -->
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+                <span class="error-msg" id="error-fechaNacimiento"></span>
+            </div>
+
+            <!-- Sexo -->
+            <div class="form-group radio-group">
+                <label>Sexo:</label>
+                <label class="radio-label"><input type="radio" name="sexo" value="Masculino"> Masculino</label>
+                <label class="radio-label"><input type="radio" name="sexo" value="Femenino"> Femenino</label>
+                <span class="error-msg" id="error-sexo"></span>
+            </div>
+
+            <!-- Celular -->
+            <div class="form-group">
+                <label for="celular">Celular / Teléfono:</label>
+                <input type="text" id="celular" name="celular" placeholder="Ej: 0991234567" maxlength="10">
+                <span class="error-msg" id="error-celular"></span>
+            </div>
+
+            <!-- Correo Electrónico -->
+            <div class="form-group">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+                <span class="error-msg" id="error-correo"></span>
+            </div>
+
+            <!-- Especialidad Médica -->
+            <div class="form-group">
+                <label for="especialidad">Especialidad Médica:</label>
+                <select id="especialidad" name="especialidad">
+                    <option value="">-- Seleccione una Especialidad --</option>
+                    <option value="Medicina General">Medicina General</option>
+                    <option value="Pediatría">Pediatría</option>
+                    <option value="Cardiología">Cardiología</option>
+                    <option value="Odontología">Odontología</option>
+                    <option value="Traumatología">Traumatología</option>
+                </select>
+                <span class="error-msg" id="error-especialidad"></span>
+            </div>
+
+            <!-- Fecha del Turno -->
+            <div class="form-group">
+                <label for="fechaTurno">Fecha solicitada para el Turno:</label>
+                <input type="date" id="fechaTurno" name="fechaTurno">
+                <span class="error-msg" id="error-fechaTurno"></span>
+            </div>
+
+            <!-- Horario -->
+            <div class="form-group">
+                <label for="horario">Jornada / Horario:</label>
+                <select id="horario" name="horario">
+                    <option value="">-- Seleccione el Horario --</option>
+                    <option value="Mañana (08:00 - 12:00)">Mañana (08:00 - 12:00)</option>
+                    <option value="Tarde (14:00 - 18:00)">Tarde (14:00 - 18:00)</option>
+                </select>
+                <span class="error-msg" id="error-horario"></span>
+            </div>
+
+            <!-- Tiene Discapacidad -->
+            <div class="form-group radio-group">
+                <label>¿Tiene Discapacidad / Atención Prioritaria?:</label>
+                <label class="radio-label"><input type="radio" name="discapacidad" value="Si"> Sí</label>
+                <label class="radio-label"><input type="radio" name="discapacidad" value="No"> No</label>
+                <span class="error-msg" id="error-discapacidad"></span>
+            </div>
+
+            <!-- Botón de Envío -->
+            <div class="form-group button-container">
+                <button type="submit" id="btnRegistrar">Registrar Turno</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="validaciones.js"></script>
+</body>
+</html>
