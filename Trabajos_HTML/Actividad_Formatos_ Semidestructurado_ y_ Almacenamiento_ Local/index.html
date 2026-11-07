@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Estudiantes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Sistema de Registro de Estudiantes</h1>
+
+    <div class="card">
+        <h2 class="card-title">Formulario de Inscripción</h2>
+        <form id="studentForm" novalidate>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="cedula">Cédula:</label>
+                    <input type="text" id="cedula" placeholder="Ej: 1312345678" maxlength="10">
+                    <span class="error-message" id="error-cedula"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" placeholder="Ej: Pérez Mendoza">
+                    <span class="error-message" id="error-apellidos"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" id="nombres" placeholder="Ej: Juan Carlos">
+                    <span class="error-message" id="error-nombres"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" placeholder="Ej: Av. 24 y Calle 13">
+                    <span class="error-message" id="error-direccion"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" placeholder="Ej: 0991234567" maxlength="10">
+                    <span class="error-message" id="error-telefono"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" placeholder="Ej: usuario@dominio.com">
+                    <span class="error-message" id="error-correo"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="facultad">Facultad:</label>
+                    <select id="facultad">
+                        <option value="">Seleccione una facultad</option>
+                        <option value="Ciencias Informáticas">Ciencias Informáticas</option>
+                        <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+                        <option value="Administración de Empresas">Administración de Empresas</option>
+                        <option value="Medicina">Medicina</option>
+                        <option value="Derecho">Derecho</option>
+                    </select>
+                    <span class="error-message" id="error-facultad"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="nivel">Nivel / Semestre:</label>
+                    <select id="nivel">
+                        <option value="">Seleccione nivel</option>
+                        <option value="1">1er Semestre</option>
+                        <option value="2">2do Semestre</option>
+                        <option value="3">3er Semestre</option>
+                        <option value="4">4to Semestre</option>
+                        <option value="5">5to Semestre</option>
+                        <option value="6">6to Semestre</option>
+                        <option value="7">7mo Semestre</option>
+                        <option value="8">8vo Semestre</option>
+                    </select>
+                    <span class="error-message" id="error-nivel"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="paralelo">Paralelo:</label>
+                    <input type="text" id="paralelo" placeholder="Ej: A" maxlength="2">
+                    <span class="error-message" id="error-paralelo"></span>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button type="submit" class="btn btn-primary">Registrar Estudiante</button>
+                <button type="button" id="btnReset" class="btn btn-secondary">Limpiar Formulario</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2 class="card-title">Estudiantes Registrados</h2>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cédula</th>
+                        <th>Nombres Completo</th>
+                        <th>Dirección</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                        <th>Facultad</th>
+                        <th>Nivel</th>
+                        <th>Paralelo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
